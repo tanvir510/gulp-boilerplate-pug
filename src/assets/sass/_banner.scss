@@ -1,0 +1,31 @@
+.banner {
+  .banner_element {
+    background: url(../img/banner/banner.png) no-repeat;
+    background-position: 100% 100%;
+    background-size: cover;
+    height: 550px;
+    position: relative;
+    .text_para {
+      position: absolute;
+      top: 30%;
+      left: 4%;
+      transform: translateY(-50%);
+      p {
+        font-size: 22px;
+        color: $base1;
+        font-weight: 400;
+        letter-spacing: 5px;
+      }
+    }
+    .black_thumb {
+      bottom: -2%;
+      left: 4%;
+      position: absolute;
+    }
+    .white_thumb {
+      bottom: -2%;
+      left: 17%;
+      position: absolute;
+    }
+  }
+}

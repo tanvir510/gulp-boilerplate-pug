@@ -1,0 +1,66 @@
+.gift_set {
+  .gift_element {
+    display: grid;
+    grid-template-columns: 48.5% 48.5%;
+    grid-column-gap: 30px;
+    padding: 10px 0px 80px;
+    .gift_left,
+    .gift_right {
+      position: relative;
+      .content {
+        position: absolute;
+        left: 3%;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      .more_btn {
+        position: absolute;
+        bottom: 25px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .title {
+        font-size: 13px;
+        font-weight: 500;
+        font-style: italic;
+        line-height: 17px;
+        color: $white;
+      }
+      .text {
+        font-size: 20px;
+        line-height: 27px;
+        color: $white;
+        font-weight: 300;
+        margin-bottom: 12px;
+        letter-spacing: -1.9px;
+      }
+    }
+    .gift_right {
+      .title {
+        color: $base1;
+      }
+      .text {
+        color: $base1;
+      }
+    }
+  }
+}
+.ad_area {
+  background: #eeeeee;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  //   grid-gap: 15px;
+  margin-bottom: 30px;
+  .thumb {
+    padding: 12px 8px;
+    &:first-child {
+      padding-left: 15px;
+    }
+    &:last-child {
+      padding-right: 15px;
+    }
+    img {
+      width: 100%;
+    }
+  }
+}

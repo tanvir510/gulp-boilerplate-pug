@@ -1,0 +1,52 @@
+body {
+  background-image: url(../img/common/add_banner.png);
+  background-repeat: repeat-y;
+  background-attachment: scroll;
+  // background-position: left;
+  background-size: 80px auto;
+  height: 100%;
+}
+
+.container {
+  max-width: 984px;
+  margin: 0 auto;
+}
+.active {
+  color: red;
+}
+.section_heading {
+  text-align: center;
+  padding: 70px 0px;
+  .title {
+    font-size: 26px;
+    font-weight: 700;
+    font-style: italic;
+    color: $base1;
+    margin-bottom: 10px;
+  }
+  .text {
+    font-weight: 300;
+    color: $base1;
+    font-size: 16px;
+  }
+}
+
+.custom_btn {
+  background: $white;
+  padding: 6px 26px;
+  border-radius: 16px;
+  font-size: 13px;
+  position: relative;
+  &.style_two {
+    background: $base1;
+    color: $white;
+  }
+  img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-40%);
+    right: 9%;
+    width: 6px;
+    height: 10px;
+  }
+}
