@@ -5,8 +5,18 @@ body {
   // background-position: left;
   background-size: 80px auto;
   height: 100%;
+  @include breakpoint(tablet) {
+    background-image: none;
+  }
 }
-
+section {
+  @include breakpoint(tablet) {
+    padding: 0px 20px;
+    &.banner {
+      padding: 0px;
+    }
+  }
+}
 .container {
   max-width: 984px;
   margin: 0 auto;
@@ -17,6 +27,9 @@ body {
 .section_heading {
   text-align: center;
   padding: 70px 0px;
+  @include breakpoint(tablet) {
+    padding: 40px 0px;
+  }
   .title {
     font-size: 26px;
     font-weight: 700;

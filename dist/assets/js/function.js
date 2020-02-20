@@ -1,1 +1,1 @@
-!function(i){"use strict";i("ul.navber_list li").on("click",function(){i(this).siblings().removeClass("active"),i(this).addClass("active")}),(new WOW).init()}(jQuery);
+!function(s){"use strict";s("ul.navber_list li").on("click",function(){s(this).siblings().removeClass("active"),s(this).addClass("active")}),(new WOW).init(),s(".add_search").on("click",function(){s(".search_bar_sp").addClass("open")}),s(".remove_search").on("click",function(){s(".search_bar_sp").removeClass("open")})}(jQuery);

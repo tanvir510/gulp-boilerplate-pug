@@ -14,8 +14,14 @@
     new WOW().init();
 
     /*--------------------------------------------
-               Wow Js Jquery
+              Click Search Jquery
     ---------------------------------------------*/
+    $('.add_search').on('click', function () {
+        $('.search_bar_sp').addClass('open')
+    })
+    $('.remove_search').on('click', function () {
+        $('.search_bar_sp').removeClass('open')
+    })
 
 
 })(jQuery);

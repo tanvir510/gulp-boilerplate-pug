@@ -1,5 +1,8 @@
 .notice {
   padding: 30px 0px;
+  @include breakpoint(tablet) {
+    padding: 30px 20px;
+  }
   .notice_content {
     border: 2px solid $base2;
     padding: 15px;

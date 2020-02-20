@@ -16,6 +16,7 @@ link(rel='stylesheet' href='/assets/css/app.css')
             .header_logo 
                 a(href='javascript:void(0)')
                     img(src='/assets/img/common/logo.png', alt='logo')
+            
             .header_nav
                 .search_area
                     form(action='javascript:void(0)' class="search_bar")
@@ -23,6 +24,18 @@ link(rel='stylesheet' href='/assets/css/app.css')
                         .search_icon
                             img(src='/assets/img/common/search.png', alt='search') 
                             span 検索
+                    .search_bar_sp
+                        form(action='javascript:void(0)' autocomplete='on' class="search_bar_inner")
+                            input#search_input(name='search' type='text' placeholder="商品名を入力してください")
+                            input#search_submit(value='Rechercher' type='submit')
+                        .add_search
+                            img(src="./assets/img/common/search_sp.svg", alt="Search")
+                        .remove_search
+                            img(src="./assets/img/common/nav_close.svg", alt="Search")
+                input(type="checkbox", id="check")
+                label(for="check" class="checkbtn")
+                    img.toggle_btn(src="./assets/img/common/nav_toggle.svg", alt="navbar")
+                    img.close_btn(src="./assets/img/common/nav_close.svg", alt="navbar")
                 .nav_area
                     ul.navber_list
                         li.nav_list 
