@@ -3,6 +3,10 @@ footer {
     display: grid;
     grid-template-columns: 48% 48%;
     grid-gap: 38px;
+    @include breakpoint(tablet) {
+      grid-template-columns: 100%;
+      grid-gap: 38px;
+    }
     .footer_widget {
       .widget_heading {
         border-bottom: 3px solid $base1;
@@ -17,6 +21,9 @@ footer {
       }
       .widget_list {
         display: block;
+        &.calendar {
+          margin-bottom: 20px;
+        }
         .credit {
           width: 60%;
         }
@@ -66,6 +73,9 @@ footer {
     .text {
       color: $white;
       font-size: 12px;
+      @include breakpoint(tablet) {
+        font-size: 11px;
+      }
     }
   }
 }

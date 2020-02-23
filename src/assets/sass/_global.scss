@@ -9,7 +9,8 @@ body {
     background-image: none;
   }
 }
-section {
+section,
+.footer_top {
   @include breakpoint(tablet) {
     padding: 0px 20px;
     &.banner {

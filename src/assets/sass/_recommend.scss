@@ -4,6 +4,10 @@
     grid-template-columns: 38% 58%;
     grid-column-gap: 30px;
     margin-bottom: 35px;
+    @include breakpoint(tablet) {
+      grid-template-columns: 100%;
+      grid-column-gap: 0px;
+    }
     .left {
       .thumb {
         text-align: center;
@@ -45,17 +49,27 @@
       }
     }
     .right {
-      .show_item {
+      .shows_item {
         border-bottom: 1px solid #d1d1d1;
         display: flex;
         padding: 20px 0px;
         position: relative;
+        @include breakpoint(tablet) {
+          padding: 10px 0px;
+        }
         .thumb {
           float: left;
+          @include breakpoint(tablet) {
+            float: none;
+            width: 100%;
+          }
         }
         .content {
           display: table;
           padding-top: 15px;
+          @include breakpoint(tablet) {
+            display: block;
+          }
           .title {
             font-size: 16px;
             font-weight: 300;

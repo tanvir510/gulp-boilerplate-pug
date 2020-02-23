@@ -4,15 +4,32 @@
     grid-template-columns: repeat(3, 2fr);
     grid-column-gap: 30px;
     margin-bottom: 35px;
+    @include breakpoint(tablet) {
+      grid-template-columns: 100%;
+    }
     .show_item {
       margin-bottom: 70px;
+      @include breakpoint(tablet) {
+        grid-template-columns: 28% 68%;
+        display: grid;
+        grid-gap: 10px;
+        border-bottom: 1px solid #d1d1d1;
+        padding-bottom: 30px;
+        margin-bottom: 30px;
+      }
       .thumb {
         margin-bottom: 20px;
+        @include breakpoint(tablet) {
+          float: left;
+        }
         img {
           width: 100%;
         }
       }
       .content {
+        @include breakpoint(tablet) {
+          display: table;
+        }
         p {
           color: $base1;
           line-height: 21px;
@@ -28,6 +45,248 @@
         .more_btn {
           text-align: right;
         }
+      }
+    }
+  }
+}
+
+.recipe_header {
+  position: relative;
+  .text {
+    color: $white;
+    font-size: 26px;
+    line-height: 35px;
+    font-weight: 300;
+    position: absolute;
+    top: 50%;
+    left: 4%;
+    transform: translateY(-50%);
+    @include breakpoint(tablet) {
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 18px;
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
+.recipe_feature {
+  margin-bottom: 60px;
+  @include breakpoint(tablet) {
+    margin-bottom: 30px;
+  }
+
+  .feature_heading {
+    position: relative;
+    text-align: center;
+    padding: 60px 0px;
+    @include breakpoint(tablet) {
+      padding: 30px 0px;
+    }
+    &::after {
+      position: absolute;
+      content: url(../img/recipe/spoon.png);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0.6;
+      z-index: -1;
+    }
+    .title {
+      color: $base1;
+      font-size: 26px;
+      line-height: 35px;
+      font-weight: 400;
+      margin-bottom: 12px;
+      @include breakpoint(tablet) {
+        font-size: 22px;
+        line-height: 30px;
+      }
+    }
+    .text {
+      color: $base1;
+      font-size: 16px;
+      line-height: 21px;
+      font-weight: 300;
+      br {
+        display: none;
+      }
+      @include breakpoint(tablet) {
+        font-size: 14px;
+        line-height: 19px;
+        br {
+          display: block;
+        }
+      }
+    }
+  }
+  .feature_element {
+    .feature_top {
+      display: flex;
+      margin-bottom: 50px;
+      @include breakpoint(tablet) {
+        flex-flow: column;
+        margin-bottom: 30px;
+      }
+
+      .content {
+        width: 48%;
+        margin-right: 20px;
+        @include breakpoint(tablet) {
+          width: 100%;
+          margin-right: 0px;
+          order: 2;
+        }
+        .title {
+          font-size: 26px;
+          line-height: 31px;
+          color: $base1;
+          font-weight: 400;
+          margin-bottom: 20px;
+          small {
+            font-size: 16px;
+            line-height: 31px;
+            color: $base1;
+            font-weight: 300;
+          }
+        }
+        .table_data {
+          width: 100%;
+          tr {
+            border-top: 1px solid #d1d1d1;
+            display: block;
+            &:last-child {
+              border-bottom: 1px solid #d1d1d1;
+            }
+            td {
+              color: $base1;
+              font-size: 15px;
+              line-height: 31px;
+              font-weight: 300;
+              padding: 5px 0px;
+            }
+          }
+        }
+      }
+      .thumb {
+        width: 50%;
+        position: relative;
+        @include breakpoint(tablet) {
+          width: 100%;
+          order: 1;
+          margin-bottom: 15px;
+        }
+        .text {
+          font-size: 50px;
+          font-weight: 300;
+          line-height: 67px;
+          color: $base1;
+          position: absolute;
+          bottom: 25%;
+          right: -18%;
+          transform: rotate(-20deg);
+          @include breakpoint(tablet) {
+            font-size: 38px;
+            line-height: 51px;
+            bottom: 0;
+          }
+        }
+      }
+    }
+    .feature_bottom {
+      .title {
+        font-size: 24px;
+        line-height: 31px;
+        color: $base1;
+        font-weight: 300;
+      }
+      .feature_bottom_element {
+        display: flex;
+        flex-wrap: wrap;
+        .show_item {
+          width: 28%;
+          margin: 10px;
+          background: #fffee5;
+          padding: 20px 15px;
+          @include breakpoint(tablet) {
+            width: 100%;
+            margin: 0;
+            margin-bottom: 15px;
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+          .thumb {
+            float: left;
+            text-align: center;
+            position: relative;
+            .num {
+              font-size: 13px;
+              line-height: 31px;
+              position: absolute;
+              color: $white;
+              letter-spacing: -0.13px;
+              top: 55%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+            }
+          }
+          .content {
+            display: table;
+            padding-left: 10px;
+            .text {
+              font-size: 13px;
+              letter-spacing: -0.13px;
+              font-weight: 300;
+              line-height: 17px;
+              color: $base1;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.ads_area {
+  margin-bottom: 70px;
+  position: relative;
+  width: 100%;
+  background: #fffee5;
+  border: 2px solid #707070;
+  padding: 40px;
+  border-radius: 12px;
+  .thumb {
+    position: absolute;
+    top: 50%;
+    left: 2%;
+    transform: translateY(-50%);
+  }
+  .content {
+    max-width: 60%;
+    margin: 0 auto;
+    .title {
+      font-size: 26px;
+      line-height: 35px;
+      color: $base1;
+      font-weight: 400;
+    }
+    .text {
+      font-size: 16px;
+      line-height: 21px;
+      color: $base1;
+      font-weight: 300;
+      text-decoration: underline;
+    }
+  }
+  .view_btn {
+    position: absolute;
+    top: 50%;
+    right: 4%;
+    transform: translateY(-50%);
+    .custom_btn {
+      &.style_two {
+        background: $base2;
       }
     }
   }
