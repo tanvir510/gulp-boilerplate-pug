@@ -59,8 +59,10 @@
              Sticky Menu Jquery
     ---------------------------------------------*/
     var fixed_top = $("header");
+    var width = $(window).width();
     $(window).on('scroll', function () {
-        if ($(this).scrollTop() > 80) {
+        console.log(width)
+        if ($(this).scrollTop() >= 70 && width <= 991) {
             fixed_top.addClass("menu-fixed animated fadeInDown");
         } else {
             fixed_top.removeClass("menu-fixed animated fadeInDown");
