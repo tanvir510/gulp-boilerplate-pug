@@ -47,6 +47,25 @@
         });
 
         calendar.render();
+
+        var dates = $(".fc-day-number");
+        dates.each(function (index) {
+            dates[index].innerHTML = dates[index].innerHTML.toString().replace('日', '');
+            dates[index].style.fontSize = '16' + 'px'
+        })
+    });
+
+    /*--------------------------------------------
+             Sticky Menu Jquery
+    ---------------------------------------------*/
+    var fixed_top = $("header");
+    $(window).on('scroll', function () {
+        if ($(this).scrollTop() > 80) {
+            fixed_top.addClass("menu-fixed animated fadeInDown");
+        } else {
+            fixed_top.removeClass("menu-fixed animated fadeInDown");
+        }
+
     });
 
 

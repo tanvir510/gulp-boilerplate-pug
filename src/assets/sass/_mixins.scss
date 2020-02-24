@@ -33,6 +33,10 @@
       @content;
     }
   } @else if $point==extra_sm {
+    @media (max-width: 360px) {
+      @content;
+    }
+  } @else if $point==extra_sm_xs {
     @media (max-width: 320px) {
       @content;
     }

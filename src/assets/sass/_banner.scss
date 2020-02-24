@@ -8,6 +8,8 @@
     @include breakpoint(tablet) {
       height: 384px;
       background: url(../img/banner/banner_sp.png) no-repeat;
+      background-position: 100% 100%;
+      background-size: cover;
     }
     .text_para {
       position: absolute;

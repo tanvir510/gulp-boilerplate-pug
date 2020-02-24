@@ -127,6 +127,7 @@
       @include breakpoint(tablet) {
         flex-flow: column;
         margin-bottom: 30px;
+        overflow: hidden;
       }
 
       .content {
@@ -143,6 +144,9 @@
           color: $base1;
           font-weight: 400;
           margin-bottom: 20px;
+          &.style_two {
+            margin-top: 30px;
+          }
           small {
             font-size: 16px;
             line-height: 31px;
@@ -175,6 +179,9 @@
           width: 100%;
           order: 1;
           margin-bottom: 15px;
+          img {
+            width: 100%;
+          }
         }
         .text {
           font-size: 50px;
@@ -185,6 +192,9 @@
           bottom: 25%;
           right: -18%;
           transform: rotate(-20deg);
+          // &.white {
+          //   color: $white;
+          // }
           @include breakpoint(tablet) {
             font-size: 38px;
             line-height: 51px;
@@ -199,6 +209,9 @@
         line-height: 31px;
         color: $base1;
         font-weight: 300;
+        @include breakpoint(tablet) {
+          margin-bottom: 10px;
+        }
       }
       .feature_bottom_element {
         display: flex;
@@ -249,27 +262,63 @@
 }
 
 .ads_area {
-  margin-bottom: 70px;
+  margin-bottom: 30px;
   position: relative;
-  width: 100%;
   background: #fffee5;
   border: 2px solid #707070;
   padding: 40px;
   border-radius: 12px;
+  &:after {
+    position: absolute;
+    content: url(../img/common/triangle.png);
+    top: -8%;
+    left: 50%;
+    transform: translateX(-50%);
+    @include breakpoint(macbook) {
+      top: -7%;
+    }
+    @include breakpoint(macbook) {
+      top: -10%;
+    }
+  }
+  @include breakpoint(tablet) {
+    padding: 15px 10px 60px;
+  }
   .thumb {
     position: absolute;
     top: 50%;
     left: 2%;
     transform: translateY(-50%);
+    @include breakpoint(tablet) {
+      top: 75%;
+      img {
+        width: 50%;
+      }
+    }
+    @include breakpoint(extra_sm) {
+      display: none;
+    }
   }
   .content {
     max-width: 60%;
     margin: 0 auto;
+    @include breakpoint(tablet) {
+      text-align: center;
+      max-width: 100%;
+    }
     .title {
       font-size: 26px;
       line-height: 35px;
       color: $base1;
       font-weight: 400;
+      @include breakpoint(tablet) {
+        font-size: 16px;
+        line-height: 22px;
+        letter-spacing: -1.19px;
+      }
+      @include breakpoint(extra_sm) {
+        font-size: 14px;
+      }
     }
     .text {
       font-size: 16px;
@@ -277,6 +326,19 @@
       color: $base1;
       font-weight: 300;
       text-decoration: underline;
+      br {
+        display: none;
+      }
+      @include breakpoint(tablet) {
+        font-size: 12px;
+        line-height: 16px;
+        br {
+          display: block;
+        }
+      }
+      @include breakpoint(extra_sm) {
+        font-size: 13px;
+      }
     }
   }
   .view_btn {
@@ -284,6 +346,11 @@
     top: 50%;
     right: 4%;
     transform: translateY(-50%);
+    @include breakpoint(tablet) {
+      right: 50%;
+      transform: translate(50%, -50%);
+      top: 80%;
+    }
     .custom_btn {
       &.style_two {
         background: $base2;

@@ -50,11 +50,36 @@ header {
       display: none;
     }
     .search_area {
+      display: flex;
+      float: right;
+      .subscribe_bar {
+        position: relative;
+        padding-left: 35px;
+        min-width: 120px;
+        @include breakpoint(tablet) {
+          display: none;
+        }
+        a {
+          position: absolute;
+          top: -39px;
+          .text {
+            position: absolute;
+            left: 50%;
+            width: 100%;
+            top: 60%;
+            transform: translate(-50%, -50%);
+            color: $white;
+            font-size: 13px;
+            text-align: center;
+            line-height: 15px;
+          }
+        }
+      }
       .search_bar {
         margin-bottom: 0;
         position: relative;
-        display: flex;
-        float: right;
+        // display: flex;
+        // float: right;
         @include breakpoint(tablet) {
           display: none;
         }
@@ -63,13 +88,14 @@ header {
           border: 1px solid #d1d1d1;
           outline: none;
           width: 211px;
-          padding: 10px;
-          border-right: 0px;
+          padding: 9px 10px 12px;
+          border-right: 0;
+          transform: translateY(-4px);
         }
         .search_icon {
           background: $base2;
           display: inline-block;
-          padding: 8px 15px;
+          padding: 7px 15px;
           cursor: pointer;
           img {
             transform: translateY(4px);
