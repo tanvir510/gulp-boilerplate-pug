@@ -16,7 +16,8 @@ section,
 .footer_top {
   @include breakpoint(macbook) {
     margin: 0px 20px;
-    &.banner {
+    &.banner,
+    &.brand_banner {
       margin: 0px;
     }
   }

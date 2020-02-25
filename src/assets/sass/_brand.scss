@@ -5,17 +5,28 @@
     background-position: 100% 100%;
     height: 494px;
     position: relative;
+    @include breakpoint(tablet) {
+      height: 384px;
+      background-position: 48% 100%;
+    }
     .banner_content {
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
       text-align: center;
+      @include breakpoint(tablet) {
+        width: 80%;
+      }
       .title {
         font-size: 34px;
         line-height: 46px;
         color: $white;
         font-weight: 300;
+        @include breakpoint(tablet) {
+          font-size: 26px;
+          line-height: 38px;
+        }
       }
       .text {
         font-size: 24px;
@@ -24,12 +35,21 @@
         font-weight: 300;
         margin-bottom: 35px;
         font-style: italic;
+        @include breakpoint(tablet) {
+          font-size: 19px;
+          line-height: 28px;
+          margin-bottom: 15px;
+        }
       }
       .para {
         font-size: 16px;
         line-height: 21px;
         color: $white;
         font-weight: 300;
+        @include breakpoint(tablet) {
+          font-size: 13px;
+          line-height: 19px;
+        }
       }
     }
   }
@@ -77,8 +97,24 @@
           font-weight: 300;
           display: inline-block;
           letter-spacing: -0.8px;
+          @include breakpoint(tablet) {
+            padding: 19px 0px;
+            font-size: 14px;
+          }
         }
       }
+    }
+  }
+}
+.brand_about {
+  .brand_item {
+    display: flex;
+    flex-flow: wrap;
+    .thumb {
+      width: 35%;
+    }
+    .content {
+      width: 65%;
     }
   }
 }
