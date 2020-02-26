@@ -83,9 +83,92 @@ section,
     display: block;
   }
 }
-
-span.fc-day-number {
-  &:nth-letter(2) {
-    color: green !important;
+.common {
+  &.style_two {
+    .common_heading {
+      .title {
+        opacity: 0.7;
+      }
+      .text {
+        color: $base1;
+      }
+    }
+    .common_content {
+      .para {
+        color: $base1;
+      }
+    }
+  }
+  &.style_three {
+    .common_heading {
+      .title {
+        opacity: 0.2;
+        color: $base1;
+      }
+      .text {
+        color: $base1;
+      }
+    }
+    .common_content {
+      .para {
+        color: $white;
+      }
+    }
+  }
+  .common_heading {
+    text-align: center;
+    padding: 20px 0px;
+    position: relative;
+    margin-bottom: 15px;
+    .title {
+      font-size: 80px;
+      line-height: 106px;
+      color: #c8d4cb;
+      font-weight: 300;
+      opacity: 0.4;
+      @include breakpoint(tablet) {
+        font-size: 60px;
+        line-height: 90px;
+      }
+    }
+    .text {
+      font-size: 32px;
+      line-height: 43px;
+      color: $white;
+      font-weight: 300;
+      letter-spacing: 2.56px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  .extra_text {
+    color: $base1;
+    font-size: 16px;
+    line-height: 21px;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 50px;
+    @include breakpoint(tablet) {
+      margin-bottom: 15px;
+    }
+  }
+  .common_content {
+    text-align: center;
+    margin-bottom: 120px;
+    @include breakpoint(tablet) {
+      text-align: left;
+    }
+    .para {
+      color: $white;
+      font-size: 16px;
+      line-height: 21px;
+      font-weight: 300;
+      @include breakpoint(tablet) {
+        margin: 0px 20px;
+      }
+    }
   }
 }
