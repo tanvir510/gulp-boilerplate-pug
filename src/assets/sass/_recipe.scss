@@ -1,18 +1,27 @@
 .recipe {
-  .recipe_element {
-    display: grid;
-    grid-template-columns: repeat(3, 2fr);
-    grid-column-gap: 30px;
-    margin-bottom: 35px;
+  .section_heading {
     @include breakpoint(tablet) {
-      grid-template-columns: 100%;
+      padding-top: 0px;
     }
+  }
+  .recipe_element {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 35px;
+
     .show_item {
       margin-bottom: 70px;
+      width: 31.8%;
+      margin-right: 20px;
+      position: relative;
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
       @include breakpoint(tablet) {
-        grid-template-columns: 28% 68%;
-        display: grid;
-        grid-gap: 10px;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: 0;
         border-bottom: 1px solid #d1d1d1;
         padding-bottom: 30px;
         margin-bottom: 30px;
@@ -20,7 +29,7 @@
       .thumb {
         margin-bottom: 20px;
         @include breakpoint(tablet) {
-          float: left;
+          width: 30%;
         }
         img {
           width: 100%;
@@ -28,22 +37,34 @@
       }
       .content {
         @include breakpoint(tablet) {
-          display: table;
+          width: 65%;
+          margin-left: 15px;
+          @include breakpoint(tablet) {
+            margin-left: 10px;
+          }
         }
-        p {
+        .title {
+          margin-bottom: 15px;
+          color: $base1;
+          line-height: 21px;
+          font-size: 16px;
+          font-weight: 300;
+          margin-bottom: 10px;
+          display: block;
+        }
+        .text {
           color: $base1;
           line-height: 21px;
           font-size: 16px;
           font-weight: 300;
         }
-        .title {
-          margin-bottom: 15px;
-        }
-        .text {
-          margin-bottom: 20px;
-        }
         .more_btn {
           text-align: right;
+          display: block;
+          margin-top: 30px;
+          @include breakpoint(tablet) {
+            margin-top: 10px;
+          }
         }
       }
     }
@@ -168,6 +189,11 @@
               line-height: 31px;
               font-weight: 300;
               padding: 5px 0px;
+              display: inline-block;
+              &:last-child {
+                float: right;
+                padding-right: 30px;
+              }
             }
           }
         }

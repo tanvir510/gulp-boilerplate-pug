@@ -4,7 +4,6 @@ body {
   background-attachment: scroll;
   background-size: 80px auto;
   height: 100%;
-  display: flex;
   @include breakpoint(macbook) {
     background-image: none;
   }
@@ -170,5 +169,21 @@ section,
         margin: 0px 20px;
       }
     }
+  }
+}
+
+.fc-today-button {
+  text-indent: -5000px;
+  position: relative;
+  min-width: 50px;
+  &:after {
+    position: absolute;
+    content: "当月";
+    top: 50%;
+    left: 50%;
+    color: $base1;
+    text-indent: 0;
+    width: 100%;
+    transform: translate(-50%, -50%);
   }
 }

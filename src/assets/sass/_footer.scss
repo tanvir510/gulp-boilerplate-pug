@@ -1,13 +1,38 @@
 footer {
   .footer_top {
-    display: grid;
-    grid-template-columns: 48% 48%;
-    grid-gap: 38px;
-    @include breakpoint(tablet) {
-      grid-template-columns: 100%;
-      grid-gap: 38px;
+    display: flex;
+    flex-wrap: wrap;
+    .left {
+      width: 48%;
+      margin-right: 15px;
+      .footer_widget {
+        &:first-child {
+          margin-bottom: 112px;
+          @include breakpoint(tablet) {
+            margin-bottom: 20px;
+          }
+        }
+      }
+      @include breakpoint(tablet) {
+        width: 100%;
+        margin-right: 0;
+      }
+    }
+    .right {
+      width: 48%;
+      margin-left: 15px;
+      @include breakpoint(tablet) {
+        width: 100%;
+        margin-left: 0;
+      }
     }
     .footer_widget {
+      margin-bottom: 50px;
+      @include breakpoint(tablet) {
+        width: 100%;
+        margin: 0;
+        margin-bottom: 20px;
+      }
       .widget_heading {
         border-bottom: 3px solid $base1;
         margin-bottom: 25px;
@@ -64,18 +89,18 @@ footer {
       }
     }
   }
-  .footer_bottom {
-    background: $base1;
-    min-height: 58px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    .text {
-      color: $white;
-      font-size: 12px;
-      @include breakpoint(tablet) {
-        font-size: 11px;
-      }
+}
+.footer_bottom {
+  background: $base1;
+  min-height: 58px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .text {
+    color: $white;
+    font-size: 12px;
+    @include breakpoint(tablet) {
+      font-size: 11px;
     }
   }
 }

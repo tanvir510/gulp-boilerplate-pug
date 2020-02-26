@@ -10,11 +10,11 @@ link(href='https://fonts.googleapis.com/css?family=Noto+Sans+JP:300,400,500,700&
 link(rel='stylesheet' href='assets/css/app.css')
 </head>
 
-<body data-spy="scroll">
+<body>
     .container
         //- // Header Start From Here
         header
-            .header_logo 
+            h1.header_logo 
                 a(href='javascript:void(0)')
                     img(src='assets/img/common/logo.png', alt='logo')
             
@@ -41,7 +41,7 @@ link(rel='stylesheet' href='assets/css/app.css')
                 label(for="check" class="checkbtn")
                     img.toggle_btn(src="assets/img/common/nav_toggle.svg", alt="navbar")
                     img.close_btn(src="assets/img/common/nav_close.svg", alt="navbar")
-                .nav_area
+                nav.nav_area
                     ul.navber_list
                         li.nav_list 
                             a(href="javascript:void(0)") 商品一覧
@@ -58,57 +58,23 @@ link(rel='stylesheet' href='assets/css/app.css')
         block content
         footer
             .footer_top
-                .footer_widget
-                    .widget_heading
-                        .title お支払いについて
-                    p.text 下記の方法がご利用可能です。
-                    ul.widget_list
-                        li
-                            span.circle
-                            | クレジットカード払い <br> VISA、MASTER、JCB、American Express、<br> DINERS Club 
-                            br
-                            img(class="credit" src="assets/img/common/img_credit.jpg", alt="credit")
-                        li 
-                            span.circle
-                            | 銀行振込（前払い）
-                        a.details(href="javascript:void(0)")
-                            img(src="assets/img/common/icon_arrow-next.svg", alt="right-arrow")
-                            | 詳細はこちら
-                .footer_widget
-                    .widget_heading
-                        .title 配送とお届けについて
-                    p.text 【配送について】
-                    ul.widget_list
-                        li 
-                            span.circle
-                            | 全商品送料無料とさせて頂きます。
-                        a.details(href="javascript:void(0)")
-                            img(src="assets/img/common/icon_arrow-next.svg", alt="right-arrow")
-                            | 詳細はこちら
-                    p.text 【お届けについて】
-                    ul.widget_list
-                        li 
-                            span.circle
-                            | ご注文商品は、宅配便にてお届け致します。
-                        li 
-                            span.circle
-                            | 配達日時は指定可能です。
-                        li 
-                            span.circle
-                            | 特にご指定のない場合は、1～5営業日以内に発送いたします。（銀行振込の場合はご入金確認後）
-                        
-                        a.details(href="javascript:void(0)")
-                            img(src="assets/img/common/icon_arrow-next.svg", alt="right-arrow")
-                            | 詳細はこちら
-                .footer_widget
-                    .widget_heading
-                        .title お問い合わせ先について
-                    p.text 株式会社クレタ・シラキス <br>〒810-0024福岡市中央区桜坂1-3-16<br>TEL：0120-503-077（受付時間：10:00～17:00（月～金）/定休日：土日祝）<br>FAX：0120-880-454（24時間受付）
-                .footer_widget
-                    .widget_heading
-                        .title 営業日カレンダー
-                    p.text 下記のの日は電話・メールでのお問い合わせ・商品の出荷がお休みです。お休み中に頂いたメールのお問い合わせは翌営業日に順次対応いたします。<br> お急ぎの場合は営業時間内にお電話にてご連絡下さい。
-                .widget_wrapper.left
+                .left
+                    .footer_widget
+                        .widget_heading
+                            .title お支払いについて
+                        p.text 下記の方法がご利用可能です。
+                        ul.widget_list
+                            li
+                                span.circle
+                                | クレジットカード払い <br> VISA、MASTER、JCB、American Express、<br> DINERS Club 
+                                br
+                                img(class="credit" src="assets/img/common/img_credit.jpg", alt="credit")
+                            li 
+                                span.circle
+                                | 銀行振込（前払い）
+                            a.details(href="javascript:void(0)")
+                                img(src="assets/img/common/icon_arrow-next.svg", alt="right-arrow")
+                                | 詳細はこちら
                     .footer_widget
                         .widget_heading
                             .title お問い合わせ先について
@@ -117,8 +83,41 @@ link(rel='stylesheet' href='assets/css/app.css')
                         .widget_heading
                             .title 営業日カレンダー
                         p.text 下記のの日は電話・メールでのお問い合わせ・商品の出荷がお休みです。お休み中に頂いたメールのお問い合わせは翌営業日に順次対応いたします。<br> お急ぎの場合は営業時間内にお電話にてご連絡下さい。
-                .widget_wrapper.right
                     .footer_widget
+                        .widget_heading
+                            .title お問い合わせ先について
+                        p.text 株式会社クレタ・シラキス <br>〒810-0024福岡市中央区桜坂1-3-16<br>TEL：0120-503-077（受付時間：10:00～17:00（月～金）/定休日：土日祝）<br>FAX：0120-880-454（24時間受付） 
+                .right
+                    .footer_widget
+                        .widget_heading
+                            .title 配送とお届けについて
+                        p.text 【配送について】
+                        ul.widget_list
+                            li 
+                                span.circle
+                                | 全商品送料無料とさせて頂きます。
+                            a.details(href="javascript:void(0)")
+                                img(src="assets/img/common/icon_arrow-next.svg", alt="right-arrow")
+                                | 詳細はこちら
+                        p.text 【お届けについて】
+                        ul.widget_list
+                            li 
+                                span.circle
+                                | ご注文商品は、宅配便にてお届け致します。
+                            li 
+                                span.circle
+                                | 配達日時は指定可能です。
+                            li 
+                                span.circle
+                                | 特にご指定のない場合は、1～5営業日以内に発送いたします。（銀行振込の場合はご入金確認後）
+                            
+                            a.details(href="javascript:void(0)")
+                                img(src="assets/img/common/icon_arrow-next.svg", alt="right-arrow")
+                                | 詳細はこちら                 
+                    .footer_widget
+                        .widget_heading
+                            .title 営業日カレンダー
+                        p.text 下記のの日は電話・メールでのお問い合わせ・商品の出荷がお休みです。お休み中に頂いたメールのお問い合わせは翌営業日に順次対応いたします。<br> お急ぎの場合は営業時間内にお電話にてご連絡下さい。
                         #calendar
                         ul.widget_list.calendar
                             li 
@@ -126,9 +125,9 @@ link(rel='stylesheet' href='assets/css/app.css')
                                 | 定休日：土日祝
                             li 
                                 span.circle
-                                | 営業時間：10:00～17:00（月～金） 
-            .footer_bottom
-                p.text Copyright(C) 2019 CRETE PSYLLAKIS CO. All Right Reserved.
+                                | 営業時間：10:00～17:00（月～金）         
+    .footer_bottom
+        p.text Copyright(C) 2019 CRETE PSYLLAKIS CO. All Right Reserved.
 script(type="text/javascript" src="assets/js/plugin.js")
 script(type="text/javascript" src="assets/js/function.js")
 </body>

@@ -1,14 +1,21 @@
 .recommend {
   .recommed_element {
-    display: grid;
-    grid-template-columns: 38% 58%;
-    grid-column-gap: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    // grid-template-columns: 38% 58%;
+    // grid-column-gap: 30px;
     margin-bottom: 35px;
-    @include breakpoint(tablet) {
-      grid-template-columns: 100%;
-      grid-column-gap: 0px;
-    }
+    // @include breakpoint(tablet) {
+    //   grid-template-columns: 100%;
+    //   grid-column-gap: 0px;
+    // }
     .left {
+      width: 38%;
+      margin-right: 15px;
+      @include breakpoint(tablet) {
+        width: 100%;
+        margin-right: 0px;
+      }
       .thumb {
         text-align: center;
         position: relative;
@@ -49,6 +56,12 @@
       }
     }
     .right {
+      width: 58%;
+      margin-left: 15px;
+      @include breakpoint(tablet) {
+        width: 100%;
+        margin-left: 0px;
+      }
       .shows_item {
         border-bottom: 1px solid #d1d1d1;
         display: flex;
@@ -75,6 +88,11 @@
             font-weight: 300;
             line-height: 22px;
             color: $base1;
+            width: 69%;
+            display: block;
+            @include breakpoint(tablet) {
+              width: 100%;
+            }
           }
           .price {
             font-size: 16px;

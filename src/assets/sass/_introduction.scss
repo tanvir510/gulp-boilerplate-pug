@@ -1,22 +1,27 @@
 .shop_intro {
   .intro_top {
-    display: grid;
-    grid-template-columns: 38% 58%;
-    grid-column-gap: 30px;
+    display: flex;
+    flex-wrap: wrap;
     margin-bottom: 35px;
     @include breakpoint(tablet) {
-      grid-template-columns: 100%;
-      grid-column-gap: 0px;
     }
     .thumb {
+      width: 38%;
       @include breakpoint(tablet) {
         margin-bottom: 15px;
+        width: 100%;
       }
       img {
         width: 100%;
       }
     }
     .content {
+      width: 58%;
+      margin-left: 25px;
+      @include breakpoint(tablet) {
+        width: 100%;
+        margin-left: 0px;
+      }
       .text {
         color: $base1;
         line-height: 21px;

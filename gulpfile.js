@@ -1,12 +1,8 @@
 // Gulp Require File
-const {
-  src,
-  dest,
-  series,
-  watch
-} = require("gulp");
+const { src, dest, series, watch } = require("gulp");
 const gulpSass = require("gulp-sass");
-const autoprefixer = require("gulp-autoprefixer");
+const autoprefixer = require("autoprefixer");
+const postcss = require("gulp-postcss");
 const minifyScss = require("gulp-minify-css");
 const sourcemaps = require("gulp-sourcemaps");
 const concat = require("gulp-concat");
@@ -18,7 +14,7 @@ const imagemin = require("gulp-imagemin");
 // Gulp Path File
 var PUG_FILE = "./src/*.pug";
 var SCSS_FILE = "./src/assets/sass/**/*.scss";
-var CSS_FILE = './src/assets/css/**/*.css'
+var CSS_FILE = "./src/assets/css/**/*.css";
 var JS_FILE = "./src/assets/js/**/*.js";
 var IMG_FILE = "./src/assets/img/**/*";
 
@@ -26,7 +22,7 @@ var IMG_FILE = "./src/assets/img/**/*";
 function sass() {
   return src([SCSS_FILE])
     .pipe(gulpSass())
-    .pipe(autoprefixer())
+    .pipe(postcss([autoprefixer()]))
     .pipe(minifyScss())
     .pipe(dest("./dist/assets/css"));
 }
@@ -40,10 +36,12 @@ function minifycss() {
 
 // JS Function
 function javascript() {
-  return src([JS_FILE])
-    .pipe(uglify())
-    // .pipe(concat("based.js"))
-    .pipe(dest("./dist/assets/js"));
+  return (
+    src([JS_FILE])
+      .pipe(uglify())
+      // .pipe(concat("based.js"))
+      .pipe(dest("./dist/assets/js"))
+  );
 }
 
 // Image Function
@@ -62,7 +60,6 @@ function html() {
 
 // Browser Sync Function
 function browser() {
-
   browserSync.init(["./dist/**/*.*"], {
     server: {
       baseDir: "./dist"

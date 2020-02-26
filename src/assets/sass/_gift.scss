@@ -1,17 +1,19 @@
 .gift_set {
   .gift_element {
-    display: grid;
-    grid-template-columns: 48.5% 48.5%;
-    grid-column-gap: 30px;
+    display: flex;
+    flex-wrap: wrap;
     padding: 10px 0px 80px;
     @include breakpoint(tablet) {
-      grid-template-columns: 100%;
-      grid-column-gap: 0px;
-      padding: 10px 0px 20px;
+      padding: 10px 0px 30px;
     }
+
     .gift_left,
     .gift_right {
       position: relative;
+      width: 48.5%;
+      @include breakpoint(tablet) {
+        width: 100%;
+      }
       .content {
         position: absolute;
         left: 3%;
@@ -53,8 +55,10 @@
       }
     }
     .gift_right {
+      margin-left: 25px;
       @include breakpoint(tablet) {
         padding-top: 20px;
+        margin-left: 0px;
       }
       .title {
         color: $base1;
@@ -67,24 +71,25 @@
 }
 .ad_area {
   background: #eeeeee;
-  display: grid;
-  grid-template-columns: 50% 50%;
+  display: flex;
+  flex-wrap: wrap;
   margin-bottom: 30px;
+  padding: 10px 10px;
   @include breakpoint(tablet) {
-    grid-template-columns: 100%;
-    background: transparent;
   }
   .thumb {
-    padding: 12px 8px;
+    width: 49.1%;
     &:first-child {
-      padding-left: 15px;
       @include breakpoint(tablet) {
-        padding: 12px 0px 6px;
+        width: 100%;
+        margin-bottom: 10px;
       }
     }
     &:last-child {
+      margin-left: 15px;
       @include breakpoint(tablet) {
-        padding: 6px 0px 12px;
+        margin-left: 0px;
+        width: 100%;
       }
     }
     img {
