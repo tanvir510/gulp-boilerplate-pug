@@ -1,9 +1,11 @@
 header {
-  display: flow-root;
+  display: block;
   position: relative;
   padding-top: 36px;
+  min-height: 100px;
   @include breakpoint(tablet) {
-    padding: 12px 0px;
+    padding: 12px 0px 0px;
+    min-height: 70px;
   }
   .header_logo {
     float: left;

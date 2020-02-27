@@ -506,6 +506,7 @@
             order: 1;
             padding-top: 70px;
             margin-bottom: 15px;
+            width: 100%;
             img {
               width: 100%;
             }
@@ -559,11 +560,20 @@
     background-size: cover;
     background-position: 100% 100%;
     background: url(../img/brand/quality-heading_1.png) no-repeat;
+    background-size: 100%;
+  }
+  @include breakpoint(mobile_sm) {
+    height: 850px;
+    background-size: cover;
   }
   .bottom_thumb {
     transform: translateY(45%);
     @include breakpoint(minitab) {
-      display: none;
+      position: absolute;
+      bottom: -4%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
     }
     // @include breakpoint(mobile_sm) {
     //   transform: translateY(73%);

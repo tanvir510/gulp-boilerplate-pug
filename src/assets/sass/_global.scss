@@ -16,8 +16,10 @@ section,
   @include breakpoint(macbook) {
     margin: 0px 20px;
     &.banner,
-    &.brand_banner {
+    &.brand_banner,
+    &.recipe_header {
       margin: 0px;
+      padding: 0;
     }
   }
 }

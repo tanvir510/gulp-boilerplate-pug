@@ -44,6 +44,16 @@ footer {
       .text {
         color: $black;
       }
+      .details {
+        padding-top: 5px;
+        display: block;
+        text-align: right;
+        margin-bottom: 15px;
+        color: $black;
+        img {
+          margin-right: 4px;
+        }
+      }
       .widget_list {
         display: block;
         &.calendar {
@@ -67,16 +77,6 @@ footer {
             top: 5px;
             left: 0;
             opacity: 0.8;
-          }
-        }
-        .details {
-          padding-top: 5px;
-          display: block;
-          text-align: right;
-          margin-bottom: 15px;
-          color: $black;
-          img {
-            margin-right: 4px;
           }
         }
       }

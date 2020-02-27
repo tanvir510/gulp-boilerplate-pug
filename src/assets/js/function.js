@@ -47,7 +47,13 @@
         day: "numeric"
       }
     });
-    calendar.render(); //
+    calendar.render();
+    var dates = $(".fc-day-number");
+    dates.each(function(index) {
+      dates[index].innerHTML = dates[index].innerHTML
+        .toString()
+        .replace("日", "");
+    });
     $(".fc-prev-button").click(function() {
       parseDate();
     });
@@ -66,9 +72,6 @@
         .replace("日", "");
     });
   }
-  $(function() {
-    parseDate();
-  })();
 
   /*--------------------------------------------
              Sticky Menu Jquery
@@ -76,7 +79,6 @@
   var fixed_top = $("header");
   var width = $(window).width();
   $(window).on("scroll", function() {
-    console.log(width);
     if ($(this).scrollTop() >= 70 && width <= 991) {
       fixed_top.addClass("menu-fixed animated fadeInDown");
     } else {

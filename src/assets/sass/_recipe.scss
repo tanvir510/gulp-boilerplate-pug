@@ -190,9 +190,9 @@
               font-weight: 300;
               padding: 5px 0px;
               display: inline-block;
+              width: 50%;
               &:last-child {
-                float: right;
-                padding-right: 30px;
+                text-align: center;
               }
             }
           }
@@ -225,6 +225,7 @@
             font-size: 38px;
             line-height: 51px;
             bottom: 0;
+            right: -11%;
           }
         }
       }
@@ -288,7 +289,7 @@
 }
 
 .ads_area {
-  margin-bottom: 30px;
+  margin-bottom: 70px;
   position: relative;
   background: #fffee5;
   border: 2px solid #707070;
@@ -297,7 +298,7 @@
   &:after {
     position: absolute;
     content: url(../img/common/triangle.png);
-    top: -8%;
+    top: -10%;
     left: 50%;
     transform: translateX(-50%);
     @include breakpoint(macbook) {
@@ -309,6 +310,7 @@
   }
   @include breakpoint(tablet) {
     padding: 15px 10px 60px;
+    margin-bottom: 30px;
   }
   .thumb {
     position: absolute;
