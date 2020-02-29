@@ -11,8 +11,8 @@ $shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.1);
 $p: #696969;
 
 //== Typography
-// @import url("https://fonts.googleapis.com/css?family=Raleway|Roboto:300i,400,400i,500,500i,700,700i,900");
-$font1: "Noto Sans JP", sans-serif;
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap");
+$font1: "Roboto";
 
 //== Font Size Veriables
 $f1: 14px !default;
